@@ -10,16 +10,10 @@
             background-color: #f4f6f9; 
             font-family: 'Century Gothic';
             margin: 0;
-        }
-
-        .container.my-5 {
-            background-color: #ffffff; 
-            padding: 50px;
-            max-width: 1350px;
-            margin: 0 auto;
-            margin-top: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; 
+            overflow: hidden;
         }
 
         .navbar {
@@ -44,81 +38,59 @@
             background-color: #0056b3; 
         }
 
-        .card img {
-            height: 350px; 
-            object-fit: cover; 
-            border-radius: 8px;
+        .bg {
+            background-size: cover;
+            background-position: center; 
+            background-repeat: no-repeat; 
+            width: 100%; 
+            height: calc(100vh - 30px); 
+            display: block;
+            position: relative; 
+        }
+
+        .banner-text {
+            position: absolute;
+            top: 40%; 
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #007bff;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .banner-text h2 {
+            font-size: 36px;
+            background-color: #e3f2fd; 
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .banner-btn {
+            margin-top: 20px;
+            padding: 10px 30px;
+            font-size: 18px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .banner-btn:hover {
+            background-color: #0056b3;
         }
 
         .footer {
             background-color: #007bff; 
             color: #f1f1f1;
-            padding: 20px 0;
+            padding: 5px 0; 
             text-align: center;
-        }
-
-        h2 {
-            background-color: #e3f2fd; 
-            padding: 10px;
-            border-radius: 5px;
-            color: #007bff; 
-        }
-
-        .card {
-            border: none;
-            background-color: #ffffff; 
-            margin-bottom: 30px;
-            border-radius: 10px;
-            overflow: hidden;
-            height: 500px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-        }
-
-        .card-body {
-            padding: 20px;
-        }
-
-        .card-title {
-            font-size: 1.25rem;
-            color: #007bff; 
-            margin-bottom: 15px;
-        }
-
-        .card-text {
-            color: #555; 
-            font-size: 0.9rem;
-        }
-
-        .btn-primary {
-            background-color: #007bff; 
-            border-color: #007bff;
-        }
-
-        .btn-primary:hover {
-            background-color: #0056b3; 
-            border-color: #0056b3;
-        }
-
-        .col-md-12 img {
+            position: relative;
             width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        .dinner-col {
-            display: flex;
-            justify-content: center;
-        }
-
-        .search-bar {
-            width: 250px;
-        }
-
-        @media (max-width: 1200px) {
-            .container.my-5 {
-                max-width: 100%;
-                padding: 30px;
-            }
+            height: 45px;
+            margin-top: auto; 
+            clear: both;
         }
     </style>
 </head>
@@ -136,7 +108,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="Home">Home</a>
+                        <a class="nav-link" href="Home.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="sched.html">Train Schedule</a>
@@ -154,21 +126,17 @@
         </div>
     </nav><br>
 
-    <div class="container my-5">
-        <h2 class="text-center mb-4">Fare Guide</h2>
-        <img src="file:///C:/Users/LEGION/Downloads/Untitled%20design.jpg" class="img-fluid" style="max-width: 100%; border-radius: 10px; height: 450px; ">
-        <div class="row g-4"> 
-            <div class="col-md-4">
+    <div class="bg" style="background-image: url('file:///C:/Users/LEGION/Downloads/Untitled%20design.jpg');">
+        <div class="banner-text">
+            <h2>BOOK A TICKET NOW!</h2>
+            <a href="ticket-booking.html" class="banner-btn">Go to Ticket Booking</a>
         </div>
     </div>
-</div>
 
     <footer class="footer">
         <p>&copy; 2025 Caguiron & Manuel | All Rights Reserved</p>
     </footer>
 
-    <script>
-        hi scrip where are you
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
