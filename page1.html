@@ -201,17 +201,18 @@
                     <label for="title" style="background-color: #b3d7f7; padding: 10px; color: #007bff; text-align: center; margin-bottom: 10px; display: block; width: 100%; border-radius: 5px;">
                         LEAVING FROM:
                     </label>
-
+ <label for="title" style="background-color: #b3d7f7; padding: 10px; color: #007bff; text-align: center; margin-bottom: 10px; display: block; width: 100%; border-radius: 5px;">
+                        LEAVING FROM:
+                    </label>
                     <select class="form-select" id="leavingFrom">
-                        <option value="0">Choose</option>
                         <option value="0">North Ave</option>
                         <option value="0">Quezon Avenue</option>
                         <option value="0">Kamuning</option>
                         <option value="3">Araneta Center-Cubao</option>
-                        <option value="5">Santolan-Annapolis</option>
-                        <option value="6">Ortigas</option>
-                        <option value="6">Shaw Boulevard</option>
-                        <option value="6">Boni</option>
+                        <option value="3">Santolan-Annapolis</option>
+                        <option value="7">Ortigas</option>
+                        <option value="7">Shaw Boulevard</option>
+                        <option value="7">Boni</option>
                         <option value="11">Guadalupe</option>
                         <option value="11">Buendia</option>
                         <option value="11">Ayala</option>
@@ -223,15 +224,14 @@
                         GOING TO:
                     </label>
                     <select class="form-select" id="goingTo">
-                        <option value="0">Choose</option>
                         <option value="0">North Ave</option>
                         <option value="0">Quezon Avenue</option>
                         <option value="0">Kamuning</option>
                         <option value="3">Araneta Center-Cubao</option>
-                        <option value="5">Santolan-Annapolis</option>
-                        <option value="6">Ortigas</option>
-                        <option value="6">Shaw Boulevard</option>
-                        <option value="6">Boni</option>
+                        <option value="3">Santolan-Annapolis</option>
+                        <option value="7">Ortigas</option>
+                        <option value="7">Shaw Boulevard</option>
+                        <option value="7">Boni</option>
                         <option value="11">Guadalupe</option>
                         <option value="11">Buendia</option>
                         <option value="11">Ayala</option>
@@ -239,9 +239,9 @@
                         <option value="15">Taft Avenue</option>
                     </select>
                     <div class="d-flex justify-content-center mt-3">
-                        <button type="button" class="btn btn-primary btn-custom me-2" onclick="showRegularFare()">Regular
+                        <button type="button" class="btn btn-primary btn-custom me-2" onclick="faremo()">Regular
                             Fare</button>
-                        <button type="button" class="btn btn-primary btn-custom" onclick="showDiscountedFare()">Discount</button>
+                        <button type="button" class="btn btn-primary btn-custom" onclick="discountmo()">Discount</button>
                     </div><BR>
 
                     <h5 class="card-title" style="background-color: #e3f2fd; padding: 10px; color: #007bff; text-align: center; margin-bottom: 10px; display: block; width: 100%; border-radius: 5px;">
@@ -249,7 +249,7 @@
                     </h5>
 
                     <div class="text-center mt-3">
-                        <img src="https://mrt3.com/images/SINGLE.png" alt="Image" class="img-fluid" style="max-width: 100%; border-radius: 10px;">
+                        <img src="ticket image" alt="Image" class="img-fluid" style="max-width: 100%; border-radius: 10px;">
                     </div>
                 </div>
             </div>
@@ -261,18 +261,24 @@
     </footer>
 
     <script>
+
         var baseFare = 13;
 
-        function showRegularFare() {
-            var ticketPrice = baseFare;
-            document.getElementById("ticket-price-value").innerHTML = ticketPrice.toFixed(2);
-        }
+    function faremo() {
+        var leavingFrom = Number(document.getElementById("leavingFrom").value);
+        var goingTo = Number(document.getElementById("goingTo").value);
+        var ticketPrice = baseFare + Math.abs(leavingFrom - goingTo);
+        document.getElementById("ticket-price-value").textContent = ticketPrice.toFixed(2);
+    }
 
-        function showDiscountedFare() {
-            var ticketPrice = baseFare * 0.80;
-            document.getElementById("ticket-price-value").innerHTML = ticketPrice.toFixed(2);
-        }
+    function discountmo() {
+        var leavingFrom = Number(document.getElementById("leavingFrom").value);
+        var goingTo = Number(document.getElementById("goingTo").value);
+        var ticketPrice = (baseFare + Math.abs(leavingFrom - goingTo)) * 0.80;
+        document.getElementById("ticket-price-value").textContent = ticketPrice.toFixed(2);
+}
+
+        
     </script>
 </body>
-
 </html>
