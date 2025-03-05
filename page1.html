@@ -262,23 +262,26 @@
 
     <script>
 
+       <script>
+           
         var baseFare = 13;
 
     function faremo() {
         var leavingFrom = Number(document.getElementById("leavingFrom").value);
         var goingTo = Number(document.getElementById("goingTo").value);
-        var ticketPrice = baseFare + Math.abs(leavingFrom - goingTo);
+        var difference = (leavingFrom - goingTo);
+        var ticketPrice = baseFare + (difference * (difference >= 0) - difference * (difference < 0));
         document.getElementById("ticket-price-value").textContent = ticketPrice.toFixed(2);
     }
 
     function discountmo() {
         var leavingFrom = Number(document.getElementById("leavingFrom").value);
         var goingTo = Number(document.getElementById("goingTo").value);
-        var ticketPrice = (baseFare + Math.abs(leavingFrom - goingTo)) * 0.80;
+        var difference = (leavingFrom - goingTo);
+        var ticketPrice = (baseFare + (difference * (difference >= 0) - difference * (difference < 0))) * 0.80;
         document.getElementById("ticket-price-value").textContent = ticketPrice.toFixed(2);
-}
+    }
 
-        
     </script>
 </body>
 </html>
