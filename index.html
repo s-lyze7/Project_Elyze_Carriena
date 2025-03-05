@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Train Ticket Project</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
-            background-color: #f4f6f9; 
-            font-family: 'Century Gothic';
+        html, body {
+            height: 100%;
             margin: 0;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; 
+        }
+
+        body {
+            background-image: url('file:///C:/Users/LEGION/Downloads/Untitled%20design.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Century Gothic';
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .container.my-5 {
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 25px;
+            max-width: 1350px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex-grow: 1;
             overflow: hidden;
         }
 
         .navbar {
             padding: 10px 0;
-            background-color: #007bff; 
+            background-color: #007bff;
         }
 
         .navbar-brand img {
@@ -35,50 +53,76 @@
 
         .navbar-nav .nav-link:hover {
             color: #f0f0f0;
-            background-color: #0056b3; 
+            background-color: #0056b3;
         }
 
-        .bg {
-            background-size: cover;
-            background-position: center; 
-            background-repeat: no-repeat; 
-            width: 100%; 
-            height: calc(100vh - 60px); 
-            display: block;
-            position: relative; 
+        h3 {
+            background-color: #b3d7f7;
+            padding: 10px;
+            border-radius: 3px;
+            color: #007bff;
         }
 
-        .banner-text {
-            position: absolute;
-            top: 40%; 
-            left: 50%;
-            transform: translate(-50%, -50%);
+        .card {
+            border: none;
+            background-color: #ffffff;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            background-color: #b3d7f7;
+            padding: 10px;
             color: #007bff;
             text-align: center;
-            z-index: 2;
+            margin-bottom: 15px;
         }
 
-        .banner-text h2 {
-            font-size: 36px;
-            background-color: #e3f2fd; 
-            padding: 20px;
-            border-radius: 5px;
-        }
-
-        .banner-btn {
-            margin-top: 20px;
-            padding: 10px 30px;
-            font-size: 18px;
+        .btn-primary {
             background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            color: white;
-            text-transform: uppercase;
-            cursor: pointer;
+            border-color: #007bff;
         }
 
-        .banner-btn:hover {
+        .btn-primary:hover {
             background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .dinner-col {
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-bar {
+            width: 250px;
+        }
+
+        @media (max-width: 1200px) {
+            .container.my-5 {
+                max-width: 100%;
+                padding: 30px;
+            }
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .form-container {
+            text-align: center;
+        }
+
+        .card-img-top {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            margin: 0 auto;
         }
 
         .footer {
@@ -88,21 +132,28 @@
             text-align: center;
             position: relative;
             width: 100%;
-            height: 45px;
+            height: 35px;
             margin-top: auto; 
             clear: both;
         }
+
+        footer p {
+            margin-bottom: 4px;
+            font-size: 16px;
+        }
     </style>
 </head>
+
 <body>
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="https://docs.google.com/document/d/1kxmJ-tXm_9vwNrMc1ND7dUilDFDW4H7VMV1XxovNg_g/edit?usp=sharing">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixHJSv33NSMrlUXGSeboaSIYkjV8_IPUHqyWNWi0U9fabDM5pAm9wr2Q3QQcb1foOpOyY8KgfKgsNV3jk-AqLoZj3zNnE_LD-rAj2AdgoD6Id8A7ENXZAoKZDPPaEgPPL3ZSNgCKwQy04/s1600/train_blue.png" alt="Logo">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://previews.123rf.com/images/asmati/asmati1706/asmati170606686/80931451-train-sign-vector-white-icon-with-soft-shadow-on-transparent-background.jpg" alt="Logo">
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -111,25 +162,90 @@
                         <a class="nav-link" href="Home.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="trainsched.html">Train Schedule</a>
+                        <a class="nav-link" href="sched.html">Train Schedule</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
                 </ul>
-                
+
                 <form class="d-flex ms-auto">
                     <input class="form-control search-bar" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-light" type="submit">Search</button>
                 </form>
             </div>
         </div>
-    </nav><br>
+    </nav><br><br>
 
-    <div class="bg" style="background-image: url('https://media-hosting.imagekit.io//bbd65f60771d41c5/Untitled%20design.png?Expires=1835740383&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=kOsK6VsXavnRGU8piLFd15jgBggM22Rm8AMsux1GxSKMrnym3weWznTdnqNs~T~oBfMqq5oA4rm23WgfJmf27H6xyreYLzsoGpOw4INUj7B2F9CwTlEkTWHn1OtggqL50rD9wUFIDpRFHJDdRvSp6qOPHp0NSQTdX~8pi7vmgtP6S0PAtzASZ14sXJh25dL3-WUt9LCe7uwu0lRC~vc7bNjneFM-ZVqVU07bKuOXJumf3IQyzI6wsYx98GcRpt64cwYPkFx4j0sDBnVYBiT2hB93kd0OQ~cTfi9c~kUDtFQxIErO98F3D4aoafev40h6Dkl3vKQphevewnaOkAJ~OQ__');">
-        <div class="banner-text">
-            <h2>BOOK A TICKET NOW!</h2>
-            <a href="ticket-booking.html" class="banner-btn">Go to Ticket Booking</a>
+    <div class="container my-5">
+        <h3 class="text-center mb-4">Fare Guide</h3>
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Manila_LRT-MRT_map.png/1200px-Manila_LRT-MRT_map.png"
+                        class="card-img-top" alt="MAP">
+                    <div class="card-body">
+                        <a href="#" class="btn btn-primary">Zoom in image</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-container ticket-price mt-4">
+                    <label for="title" style="background-color: #b3d7f7; padding: 10px; color: #007bff; text-align: center; margin-bottom: 10px; display: block; width: 100%; border-radius: 5px;">
+                        LEAVING FROM:
+                    </label>
+
+                    <select class="form-select" id="leavingFrom">
+                        <option value="0">North Ave</option>
+                        <option value="0">Quezon Avenue</option>
+                        <option value="0">Kamuning</option>
+                        <option value="3">Araneta Center-Cubao</option>
+                        <option value="3">Santolan-Annapolis</option>
+                        <option value="7">Ortigas</option>
+                        <option value="7">Shaw Boulevard</option>
+                        <option value="7">Boni</option>
+                        <option value="11">Guadalupe</option>
+                        <option value="11">Buendia</option>
+                        <option value="11">Ayala</option>
+                        <option value="15">Magellanes</option>
+                        <option value="15">Taft Avenue</option>
+                    </select><br>
+
+                    <label for="title" class="mt-3" style="background-color: #b3d7f7; padding: 10px; color: #007bff; text-align: center; margin-bottom: 10px; display: block; width: 100%; border-radius: 5px;">
+                        GOING TO:
+                    </label>
+                    <select class="form-select" id="goingTo">
+                        <option value="0">North Ave</option>
+                        <option value="0">Quezon Avenue</option>
+                        <option value="0">Kamuning</option>
+                        <option value="3">Araneta Center-Cubao</option>
+                        <option value="3">Santolan-Annapolis</option>
+                        <option value="7">Ortigas</option>
+                        <option value="7">Shaw Boulevard</option>
+                        <option value="7">Boni</option>
+                        <option value="11">Guadalupe</option>
+                        <option value="11">Buendia</option>
+                        <option value="11">Ayala</option>
+                        <option value="15">Magellanes</option>
+                        <option value="15">Taft Avenue</option>
+                    </select>
+                    <div class="d-flex justify-content-center mt-3">
+                        <button type="button" class="btn btn-primary btn-custom me-2" onclick="faremo()">Regular
+                            Fare</button>
+                        <button type="button" class="btn btn-primary btn-custom" onclick="discountmo()">Discount</button>
+                    </div><BR>
+
+                    <h5 class="card-title" style="background-color: #e3f2fd; padding: 10px; color: #007bff; text-align: center; margin-bottom: 10px; display: block; width: 100%; border-radius: 5px;">
+                        TICKET PRICE: ₱<span id="ticket-price-value">0.00</span>
+                    </h5>
+
+                    <div class="text-center mt-3">
+                        <img src="ticket image" alt="Image" class="img-fluid" style="max-width: 100%; border-radius: 10px;">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -137,6 +253,25 @@
         <p>&copy; 2025 Caguiron & Manuel | All Rights Reserved</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+        var baseFare = 13;
+
+    function faremo() {
+        var leavingFrom = Number(document.getElementById("leavingFrom").value);
+        var goingTo = Number(document.getElementById("goingTo").value);
+        var ticketPrice = baseFare + Math.abs(leavingFrom - goingTo);
+        document.getElementById("ticket-price-value").textContent = ticketPrice.toFixed(2);
+    }
+
+    function discountmo() {
+        var leavingFrom = Number(document.getElementById("leavingFrom").value);
+        var goingTo = Number(document.getElementById("goingTo").value);
+        var ticketPrice = (baseFare + Math.abs(leavingFrom - goingTo)) * 0.80;
+        document.getElementById("ticket-price-value").textContent = ticketPrice.toFixed(2);
+}
+
+        
+    </script>
 </body>
 </html>
