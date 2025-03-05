@@ -141,6 +141,11 @@
             margin-bottom: 4px;
             font-size: 16px;
         }
+
+        .card-body.d-flex.justify-content-center {
+            display: flex;
+            justify-content: center;
+        }
     </style>
 </head>
 
@@ -148,8 +153,8 @@
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <img src="https://previews.123rf.com/images/asmati/asmati1706/asmati170606686/80931451-train-sign-vector-white-icon-with-soft-shadow-on-transparent-background.jpg" alt="Logo">
+            <a class="navbar-brand" href="https://docs.google.com/document/d/1kxmJ-tXm_9vwNrMc1ND7dUilDFDW4H7VMV1XxovNg_g/edit?usp=sharing">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixHJSv33NSMrlUXGSeboaSIYkjV8_IPUHqyWNWi0U9fabDM5pAm9wr2Q3QQcb1foOpOyY8KgfKgsNV3jk-AqLoZj3zNnE_LD-rAj2AdgoD6Id8A7ENXZAoKZDPPaEgPPL3ZSNgCKwQy04/s1600/train_blue.png" alt="Logo">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -162,7 +167,7 @@
                         <a class="nav-link" href="Home.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="sched.html">Train Schedule</a>
+                        <a class="nav-link" href="trainsched.html">Train Schedule</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact Us</a>
@@ -183,10 +188,10 @@
         <div class="row g-4">
             <div class="col-md-6">
                 <div class="card">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Manila_LRT-MRT_map.png/1200px-Manila_LRT-MRT_map.png"
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Manila_LRT-MRT_map.png/1200px-Manila_LRT-MRT-map.png"
                         class="card-img-top" alt="MAP">
-                    <div class="card-body">
-                        <a href="#" class="btn btn-primary">Zoom in image</a>
+                    <div class="card-body d-flex justify-content-center">
+                        <a href="map.html" class="btn btn-primary" target="_blank">Zoom in</a>
                     </div>
                 </div>
             </div>
@@ -198,6 +203,7 @@
                     </label>
 
                     <select class="form-select" id="leavingFrom">
+                        <option value="0">Choose</option>
                         <option value="0">North Ave</option>
                         <option value="0">Quezon Avenue</option>
                         <option value="0">Kamuning</option>
@@ -217,6 +223,7 @@
                         GOING TO:
                     </label>
                     <select class="form-select" id="goingTo">
+                        <option value="0">Choose</option>
                         <option value="0">North Ave</option>
                         <option value="0">Quezon Avenue</option>
                         <option value="0">Kamuning</option>
@@ -242,7 +249,7 @@
                     </h5>
 
                     <div class="text-center mt-3">
-                        <img src="ticket image" alt="Image" class="img-fluid" style="max-width: 100%; border-radius: 10px;">
+                        <img src="https://mrt3.com/images/SINGLE.png" alt="Image" class="img-fluid" style="max-width: 100%; border-radius: 10px;">
                     </div>
                 </div>
             </div>
